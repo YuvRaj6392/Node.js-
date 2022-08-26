@@ -28,21 +28,5 @@ const writeFile = (path, content) => {
 
 
 
-// const readFile=(path)=>{
-//     return new promises((resolve,reject)=>{
-//         fs.readFile(path,(err,data)=>{
-//             if(err)
-//             {
-//                 reject("This has been rejected!")
-//             }
-//             else
-//             {
-//                 resolve("Things have been resolved!")
-//             }
-//         })
-//     })
-
-// }
-
 
 
