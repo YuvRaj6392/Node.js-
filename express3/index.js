@@ -8,10 +8,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 //  app.use(cors)
 const port=8080;
 
-app.all('/', (request, response)=>{
+app.get('/', (request, response)=>{
     response.sendFile(__dirname +'/form.html');
-    console.log(request.body)
    });
+
+app.post('/form-submitted',(request,response)=>{
+    response.send(`Hello there ${request.body.name}`)
+   
+})
    
 app.use('/',router);
 
