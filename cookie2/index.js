@@ -33,10 +33,10 @@ app.use('/authenticate',(req,res,next)=>{
 
 
 
-app.post('/authenticate',(req,res)=>{
-    const name=req.body.name;
-    const email=req.body.email;
-    res.cookie('user','admin',{maxAge:360000});
+app.get('/authenticate',(req,res)=>{
+    const name=req.query.name;
+    const email=req.query.email;
+    res.cookie('user','admin',{maxAge:360000},{signed:true});
     res.send(`hello ${name} your email id is ${email}`)
 })
 

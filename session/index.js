@@ -9,7 +9,6 @@ app.get('/',(req,res)=>{
 
     req.session.name="SampleSession";
     res.send("session has been set!");
-
 })
 
 app.get('/session',(req,res)=>{
